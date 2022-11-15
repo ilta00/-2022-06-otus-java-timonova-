@@ -1,4 +1,4 @@
-package main.java.ru.otus.timonova;
+package ru.otus.timonova;
 
 import main.java.ru.otus.timonova.testing.MyTest;
 
