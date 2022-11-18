@@ -1,8 +1,8 @@
-package main.java.ru.otus.timonova.test;
+package ru.otus.timonova.test;
 
-import main.java.ru.otus.timonova.annotations.After;
-import main.java.ru.otus.timonova.annotations.Before;
-import main.java.ru.otus.timonova.annotations.Test;
+import ru.otus.timonova.annotations.After;
+import ru.otus.timonova.annotations.Before;
+import ru.otus.timonova.annotations.Test;
 
 public class TestClass {
 
