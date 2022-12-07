@@ -1,0 +1,11 @@
+        до оптимизации               после оптимизации
+256m  - ошибка при запуске           msec:3859, sec:3
+512m  - msec:16339, sec:16           msec:2875, sec:2
+768m  - msec:15515, sec:15           msec:2787, sec:2
+1024m - msec:15394, sec:15           msec:2877, sec:2
+1280m - msec:15248, sec:15           msec:2881, sec:2
+1536m - msec:14766, sec:14           msec:2881, sec:2
+1792m - msec:14100, sec:14           msec:3103, sec:3
+2048m - msec:14341, sec:14           msec:3032, sec:3
+
+оптимально 1792m                       512m
