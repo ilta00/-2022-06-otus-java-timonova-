@@ -1,6 +1,5 @@
 package ru.otus.timonova;
 
-import ru.otus.timonova.banknotes.Banknote;
 import ru.otus.timonova.exceptions.CannotGetSumException;
 import ru.otus.timonova.exceptions.IllegalBanknoteNominalException;
 import ru.otus.timonova.exceptions.NotEnoughMoneyException;
@@ -17,6 +16,12 @@ public class AutomatedTellerMachineImpl implements AutomatedTellerMachine {
             return o1.compareTo(o2);
         }
     });
+
+    public AutomatedTellerMachineImpl(Banknote... args) {
+        Arrays.stream(args).toList().forEach(banknote -> {
+            banknoteMap.put(banknote.getNominal(), new LinkedList<Banknote>());
+        });
+    }
 
     public void putBanknote(Banknote banknote) {
         int nominal = banknote.getNominal();
@@ -37,7 +42,7 @@ public class AutomatedTellerMachineImpl implements AutomatedTellerMachine {
 
     public List<Banknote> getSum(int sum) throws NotEnoughMoneyException, CannotGetSumException {
         int balance = getBalance();
-        if (balance < sum){
+        if (balance < sum) {
             throw new NotEnoughMoneyException();
         }
 

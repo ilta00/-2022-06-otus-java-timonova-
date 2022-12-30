@@ -1,28 +1,26 @@
 package ru.otus.timonova;
 
-import ru.otus.timonova.banknotes.*;
 import ru.otus.timonova.exceptions.CannotGetSumException;
 import ru.otus.timonova.exceptions.NotEnoughMoneyException;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
 
     public static void main(String... args) {
-        AutomatedTellerMachine atm = new Atm1050100200Banknotes();
+        AutomatedTellerMachine atm = new AutomatedTellerMachineImpl(Banknote.TEN, Banknote.FIFTY, Banknote.ONEHUHDRED, Banknote.TWOHUNDRED);
 
         //Принимает банкноты разных номиналов
-        atm.putBanknote(new Banknote10());
-        atm.putBanknote(new Banknote10());
-        atm.putBanknote(new Banknote50());
-        atm.putBanknote(new Banknote100());
-        atm.putBanknote(new Banknote100());
-        atm.putBanknote(new Banknote100());
-        atm.putBanknote(new Banknote100());
-        atm.putBanknote(new Banknote200());
-        atm.putBanknote(new Banknote200());
+        atm.putBanknote(Banknote.TEN);
+        atm.putBanknote(Banknote.TEN);
+        atm.putBanknote(Banknote.FIFTY);
+        atm.putBanknote(Banknote.ONEHUHDRED);
+        atm.putBanknote(Banknote.ONEHUHDRED);
+        atm.putBanknote(Banknote.ONEHUHDRED);
+        atm.putBanknote(Banknote.ONEHUHDRED);
+        atm.putBanknote(Banknote.TWOHUNDRED);
+        atm.putBanknote(Banknote.TWOHUNDRED);
 
         //Выдает сумму остатка денежных средств
         System.out.println("Баланс: " + atm.getBalance());

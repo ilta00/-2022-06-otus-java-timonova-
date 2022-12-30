@@ -1,6 +1,5 @@
 package ru.otus.timonova;
 
-import ru.otus.timonova.banknotes.Banknote;
 import ru.otus.timonova.exceptions.CannotGetSumException;
 import ru.otus.timonova.exceptions.NotEnoughMoneyException;
 
