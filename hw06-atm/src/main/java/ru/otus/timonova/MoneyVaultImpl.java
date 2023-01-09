@@ -85,18 +85,6 @@ public class MoneyVaultImpl implements MoneyVault {
         return banknoteList;
     }
 
-    private void putBanknotesBack(Map<Integer, List<Banknote>> banknoteListMap) {
-        for (Map.Entry<Integer, Queue<Banknote>> entry : banknoteMap.entrySet()) {
-            if (!banknoteListMap.containsKey(entry.getKey())) {
-                continue;
-            }
-            List<Banknote> banknoteList = banknoteListMap.get(entry.getKey());
-            banknoteList.forEach(banknote -> {
-                entry.getValue().add(banknote);
-            });
-        }
-    }
-
     private Map<Integer, Queue<Banknote>> copyVault(Map<Integer, Queue<Banknote>> map) {
         return Map.copyOf(map);
     }
