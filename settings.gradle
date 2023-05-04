@@ -1,4 +1,4 @@
-rootProject.name = '2022-06-otus-java-timonova'
+rootProject.name = '2023-02-otus-java-timonova'
 include 'hw01-gradle'
 include 'hw02-collections'
 include 'hw03-annotations'
