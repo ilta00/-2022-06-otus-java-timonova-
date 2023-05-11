@@ -1,7 +1,6 @@
 package ru.otus.model;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Message {
     private final long id;
@@ -132,6 +131,10 @@ public class Message {
                 ", field12='" + field12 + '\'' +
                 ", field13='" + field13 + '\'' +
                 '}';
+    }
+
+    public Message getCopy(){
+        return this.toBuilder().build();
     }
 
     public static class Builder {

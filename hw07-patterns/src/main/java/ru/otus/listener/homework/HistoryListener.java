@@ -9,13 +9,13 @@ import java.util.Optional;
 
 public class HistoryListener implements Listener, HistoryReader {
 
-    Map<Long, Message> history = new HashMap<>();
+    private final Map<Long, Message> history = new HashMap<>();
 
     @Override
     public void onUpdated(Message msg) {
         var logString = String.format("historyMsg:%s", msg);
         System.out.println(logString);
-        history.put(msg.getId(), msg.toBuilder().build());
+        history.put(msg.getId(), msg.getCopy());
     }
 
     @Override
