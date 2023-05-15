@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.otus'
+version 'unspecified'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    testImplementation ("org.junit.jupiter:junit-jupiter-api")
+    testImplementation ("org.junit.jupiter:junit-jupiter-engine")
+    testImplementation ("org.junit.jupiter:junit-jupiter-params")
+    testImplementation ("org.assertj:assertj-core:3.22.0")
+
+    implementation group: 'jakarta.json', name: 'jakarta.json-api', version: '2.1.1'
+    implementation group: 'org.eclipse.parsson', name: 'parsson', version: '1.1.1'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.10.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
